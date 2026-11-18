@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .logo {width:64px;}
+      .card {
+    transition: opacity 0.8s ease, transform 0.8s ease,
+                box-shadow 0.3s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slick-slider {
+  display: flex !important;
+  align-items: center;
+}
+
+.carousel__item>img{width:350px; margin-right: 20px;}
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+
+<body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <img class="logo" src="logo.png" alt="Logo">
+    <a class="navbar-brand" href="#">Travel guide</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> What's your favorite country?</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="writefavcountry.html">Write here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Top-3 countries      </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="russia.html">Russia</a></li>
+            <li><a class="dropdown-item" href="germany.html">Germany</a></li>
+            <li><a class="dropdown-item" href="belgium.html">Belgium</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <!-- Главный заголовок -->
+    <header class="container my-5 text-center">
+      <h1>Welcome</h1>
+      <p class="lead">Guides about my personal favourite countries in Europe</p>
+    </header>
+
+    <!-- Услуги -->
+    <section id="services" class="container my-5">
+      <h2 class="text-center mb-4">Our guides</h2>
+      <div class="row">
+        <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="russia.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Russia</h5>
+            <p class="card-text">Biggest country in the world with mountains, forests, seas, rivers and beatiful and modern cities stretching over two continents. Also has a really interesting history all the way from very early times.</p>
+            <a href="russia.html" class="btn btn-success">Go to cities</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="germany-pic.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Germany</h5>
+            <p class="card-text">Fantastic architecture that has been built over the times. Much differences between regions because the regions were different countries before. Has both the North sea in north and the Alps in south. </p>
+            <a href="germany.html" class="btn btn-success">Go to cities</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="belgium-pic.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Belgium</h5>
+            <p class="card-text">Beautiful country in middle Europe next to the North sea with beatiful architecture and cool infrastracture.</p>
+            <a href="belgium.html" class="btn btn-success">Go to cities</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="container my-5">
+      <h2 class="text-center mb-4">Reviews of our readers</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>I always check this site before traveling!</p>
+            <footer class="blockquote-footer">Cake</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>Really good guide!</p>
+            <footer class="blockquote-footer">mr. Twister</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+    <div class="carousel">
+      <div class="carousel__item"><img src="belgium-pic.webp" alt=""><p class="carousel__title">Bruges, Belgium</p></div>
+      <div class="carousel__item"><img src="brussels-grand-place.jpg" alt=""><p class="carousel__title">Brussels, Belgium</p></div>
+      <div class="carousel__item"><img src="moscow-city.jpg" alt=""><p class="carousel__title">Moscow, Russia</p></div>
+      <div class="carousel__item"><img src="vladivostok bridge.webp" alt=""><p class="carousel__title">Vladivostok,Russia</p></div>
+      <div class="carousel__item"><img src="moscow-river.jpg" alt=""><p class="carousel__title">Moscow, Russia</p></div>
+      <div class="carousel__item"><img src="moscow-kremlin.avif" alt=""><p class="carousel__title">Moscow, Russia</p></div>
+      <div class="carousel__item"><img src="munich2.avif" alt=""><p class="carousel__title">Munich, Germany</p></div>
+    </div>
+    </div>
+
+    <!-- Контактная форма -->
+<div class="container">
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We will not give away your email to anybody.</div>
+  </div>
+    <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Text area</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+      <div class="mb-3">
+        <label for="exampleInputName1" class="form-label">Your name</label>
+        <input type="text" class="form-control" id="exampleInputName1" aria-describedby="textHelp">
+      </div>
+
+ 
+  <button type="submit" class="btn btn-success">Send</button>
+</form>
+  </div>
+    <!-- Подвал -->
+    <footer class="bg-dark text-white py-4 footer"> 
+      <div class="container text-center">
+        <p>&copy; Travel guide.</p>
+      </div>
+      <input type="button" value="Subscribe" class="btn1">
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
